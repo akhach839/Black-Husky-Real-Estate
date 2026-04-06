@@ -31,7 +31,7 @@ header img {
 
 /* CONTAINER */
 .container {
-  width: 1200px; /* 🔥 FIX: fixed width ensures 3 fit */
+  width: 1200px;
   margin: auto;
   padding: 20px 0;
 }
@@ -54,15 +54,21 @@ header img {
   font-size: 28px;
 }
 
-/* GRID — FORCE 3 */
+.stat p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* GRID */
 .grid {
-  display: flex; /* 🔥 no wrapping grid issues */
+  display: flex;
   gap: 25px;
 }
 
 /* CARDS */
 .card {
-  flex: 1; /* 🔥 equal width */
+  flex: 1;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -79,6 +85,16 @@ header img {
   padding: 15px;
 }
 
+.content h3 {
+  margin: 0 0 5px;
+}
+
+.location {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -91,7 +107,33 @@ header img {
   font-weight: 600;
 }
 
-/* MOBILE FALLBACK */
+.bold {
+  font-weight: 600;
+}
+
+/* SERVICES */
+.services {
+  margin-top: 50px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.services h2 {
+  margin-bottom: 15px;
+}
+
+.services ul {
+  padding-left: 18px;
+  color: #374151;
+}
+
+.services li {
+  margin-bottom: 8px;
+}
+
+/* MOBILE */
 @media (max-width: 1250px) {
   .container {
     width: 95%;
@@ -134,8 +176,11 @@ header img {
   <img src="auroracondo.jpg">
   <div class="content">
     <h3>Aurora Condo</h3>
+    <div class="location">Aurora, CO</div>
     <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
+    <div class="row"><span>ROI</span><span class="bold">~8%+</span></div>
+    <div class="row"><span>Financing</span><span>2.8% Assumable</span></div>
   </div>
 </div>
 
@@ -143,8 +188,11 @@ header img {
   <img src="denton house.webp">
   <div class="content">
     <h3>Denton House</h3>
+    <div class="location">Denton, TX</div>
     <div class="row"><span>Rent</span><span class="green">$2,000</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
+    <div class="row"><span>ROI</span><span class="bold">~7%+</span></div>
+    <div class="row"><span>Financing</span><span>2.5% Assumable</span></div>
   </div>
 </div>
 
@@ -152,12 +200,26 @@ header img {
   <img src="denver condo.jpg">
   <div class="content">
     <h3>Denver Condo</h3>
+    <div class="location">Denver, CO</div>
     <div class="row"><span>Rent</span><span class="green">$1,300</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$870/mo</span></div>
+    <div class="row"><span>ROI</span><span class="bold">~10%+</span></div>
+    <div class="row"><span>Status</span><span>Owned Free & Clear</span></div>
   </div>
 </div>
 ```
 
+  </div>
+
+  <div class="services">
+    <h2>Investment & Advisory Services</h2>
+    <ul>
+      <li>Full-service property management for residential rentals</li>
+      <li>Investment consulting for cash-flow focused portfolios</li>
+      <li>Acquisition strategy (off-market & value-add opportunities)</li>
+      <li>Portfolio scaling & optimization guidance</li>
+      <li>Short-term and long-term rental strategy advising</li>
+    </ul>
   </div>
 
 </div>
