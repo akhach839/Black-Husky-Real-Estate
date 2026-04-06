@@ -57,13 +57,14 @@ header img {
   color: #6b7280;
 }
 
+/* GRID NOW HANDLES 4 CLEANLY */
 .grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
 }
 
 .card {
-  flex: 1;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -151,7 +152,7 @@ header img {
     width: 95%;
   }
   .grid {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -168,15 +169,15 @@ header img {
 
   <div class="stats">
     <div class="stat">
-      <h3>$2,570+</h3>
+      <h3>$4,870+</h3>
       <p>Monthly Cash Flow</p>
     </div>
     <div class="stat">
-      <h3>$30K+</h3>
+      <h3>$58K+</h3>
       <p>Annual Income</p>
     </div>
     <div class="stat">
-      <h3>$700K+</h3>
+      <h3>$790K+</h3>
       <p>Portfolio Value</p>
     </div>
   </div>
@@ -220,6 +221,19 @@ header img {
     <div class="row"><span>Market Value</span><span>$150K</span></div>
     <div class="row"><span>Current Debt</span><span>$0</span></div>
     <div class="row"><span>Equity</span><span class="bold">$150K</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="aurorahouse.png">
+  <div class="content">
+    <h3>Aurora House</h3>
+    <div class="location">14813 E Warren Ave · Aurora, CO</div>
+    <div class="row"><span>Rent</span><span class="green">$2,600</span></div>
+    <div class="row"><span>Cash Flow</span><span class="green">$2,300/mo</span></div>
+    <div class="row"><span>Market Value</span><span>$400K</span></div>
+    <div class="row"><span>Current Debt</span><span>$0</span></div>
+    <div class="row"><span>Equity</span><span class="bold">$400K</span></div>
   </div>
 </div>
 ```
