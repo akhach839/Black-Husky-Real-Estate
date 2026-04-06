@@ -15,11 +15,10 @@ body {
   color: #111827;
 }
 
-/* HEADER */
 header {
   text-align: center;
-  padding: 20px 20px 0;
-  background: #ffffff;
+  padding: 20px;
+  background: white;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -28,14 +27,12 @@ header img {
   max-width: 100%;
 }
 
-/* CONTAINER */
 .container {
   width: 1200px;
   margin: auto;
   padding: 30px 0;
 }
 
-/* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
@@ -43,59 +40,79 @@ header img {
   text-align: center;
 }
 
-.stat {
-  flex: 1;
-}
-
 .stat h3 {
   margin: 0;
   color: #16a34a;
-  font-size: 32px;
 }
 
-.stat p {
-  margin: 5px 0 0;
-  color: #6b7280;
-  font-size: 14px;
-}
-
-/* GRID */
 .grid {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
 }
 
-/* CARDS */
 .card {
   flex: 1 1 calc(25% - 25px);
   background: white;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
-  transition: all 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+/* GALLERY */
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
 
-/* DESKTOP IMAGES */
-.card img {
+.gallery-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.gallery img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* MOBILE IMAGE FIX - SQUARE + NO ZOOM */
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.left { left: 5px; }
+.right { right: 5px; }
+
+/* MOBILE SQUARE */
 @media (max-width: 768px) {
-  .card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+  .gallery {
+    aspect-ratio: 1/1;
     height: auto;
+  }
+
+  .gallery img {
+    height: 100%;
     object-fit: contain;
     background: #f3f4f6;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .container {
+    width: 95%;
   }
 }
 
@@ -103,53 +120,14 @@ header img {
   padding: 15px;
 }
 
-.content h3 {
-  margin: 0 0 5px;
-}
-
-.location {
-  font-size: 13px;
-  color: #6b7280;
-  margin-bottom: 10px;
-}
-
 .row {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin-bottom: 5px;
 }
 
-.green {
-  color: #16a34a;
-  font-weight: 600;
-}
-
-.rate {
-  color: #2563eb;
-  font-weight: 600;
-}
-
-/* CONTACT */
-.contact {
-  margin-top: 50px;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  text-align: center;
-}
-
-/* MOBILE LAYOUT */
-@media (max-width: 1250px) {
-  .container {
-    width: 95%;
-  }
-
-  .card {
-    flex: 1 1 100%;
-  }
-}
+.green { color: #16a34a; }
+.rate { color: #2563eb; }
 </style>
 </head>
 
@@ -161,91 +139,83 @@ header img {
 
 <div class="container">
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <h3>$4,870+</h3>
-      <p>Monthly Cash Flow</p>
-    </div>
-
-    <div class="stat">
-      <h3>$58K+</h3>
-      <p>Annual Income</p>
-    </div>
-
-    <div class="stat">
-      <h3>6%+</h3>
-      <p>Cash Yield</p>
-    </div>
+<div class="stats">
+  <div class="stat">
+    <h3>$4,870+</h3>
+    <p>Monthly Cash Flow</p>
   </div>
+  <div class="stat">
+    <h3>$58K+</h3>
+    <p>Annual Income</p>
+  </div>
+</div>
 
-  <!-- PROPERTIES -->
-  <div class="grid">
+<div class="grid">
 
-    <!-- Aurora Condo -->
-    <div class="card">
+<!-- CARD -->
+<div class="card">
+  <div class="gallery">
+    <div class="gallery-track">
       <img src="./auroracondo.jpg">
-      <div class="content">
-        <h3>Aurora Condo</h3>
-        <div class="location">Aurora, CO</div>
-        <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
-        <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
-        <div class="row"><span>Value</span><span>$330,000</span></div>
-        <div class="row"><span>Debt</span><span>$170,000</span></div>
-        <div class="row"><span>Rate</span><span class="rate">2.5%</span></div>
-      </div>
+      <img src="./auroracondo.jpg">
+      <img src="./auroracondo.jpg">
     </div>
-
-    <!-- Denton House -->
-    <div class="card">
-      <img src="./denton-house.webp">
-      <div class="content">
-        <h3>Denton House</h3>
-        <div class="location">Denton, TX</div>
-        <div class="row"><span>Rent</span><span class="green">$2,000</span></div>
-        <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
-        <div class="row"><span>Value</span><span>$310,000</span></div>
-        <div class="row"><span>Debt</span><span>$200,000</span></div>
-        <div class="row"><span>Rate</span><span class="rate">2.8%</span></div>
-      </div>
-    </div>
-
-    <!-- Denver Condo -->
-    <div class="card">
-      <img src="./denver-condo.jpg">
-      <div class="content">
-        <h3>Denver Condo</h3>
-        <div class="location">Denver, CO</div>
-        <div class="row"><span>Rent</span><span class="green">$1,300</span></div>
-        <div class="row"><span>Cash Flow</span><span class="green">$870/mo</span></div>
-        <div class="row"><span>Value</span><span>$150,000</span></div>
-        <div class="row"><span>Debt</span><span>$0</span></div>
-      </div>
-    </div>
-
-    <!-- Aurora House -->
-    <div class="card">
-      <img src="./aurorahouse.png">
-      <div class="content">
-        <h3>Aurora House</h3>
-        <div class="location">Aurora, CO</div>
-        <div class="row"><span>Rent</span><span class="green">$2,600</span></div>
-        <div class="row"><span>Cash Flow</span><span class="green">$2,300/mo</span></div>
-        <div class="row"><span>Value</span><span>$450,000+</span></div>
-        <div class="row"><span>Debt</span><span>$0</span></div>
-      </div>
-    </div>
-
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
   </div>
 
-  <!-- CONTACT -->
-  <div class="contact">
-    <h2>Contact</h2>
-    <p>Email: blackhuskyre@gmail.com</p>
-    <p>Phone: 720-238-9330</p>
+  <div class="content">
+    <h3>Aurora Condo</h3>
+    <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
+    <div class="row"><span>Cash Flow</span><span class="green">$900</span></div>
+    <div class="row"><span>Rate</span><span class="rate">2.5%</span></div>
   </div>
+</div>
 
 </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".gallery").forEach(gallery => {
+  const track = gallery.querySelector(".gallery-track");
+  const slides = track.children;
+  let index = 0;
+
+  const update = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  gallery.querySelector(".right").onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  gallery.querySelector(".left").onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+
+  // SWIPE SUPPORT
+  let startX = 0;
+
+  track.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener("touchend", e => {
+    let diff = e.changedTouches[0].clientX - startX;
+
+    if (diff > 50) {
+      index = (index - 1 + slides.length) % slides.length;
+    } else if (diff < -50) {
+      index = (index + 1) % slides.length;
+    }
+
+    update();
+  });
+});
+</script>
 
 </body>
 </html>
