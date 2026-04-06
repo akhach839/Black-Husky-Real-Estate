@@ -25,8 +25,8 @@ header {
 }
 
 header img {
-  width: 800px;
-  max-width: 98%;
+  width: 600px; /* 🔥 25% smaller */
+  max-width: 95%;
   display: block;
   margin: 0 auto;
 }
@@ -49,8 +49,7 @@ header img {
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 20px 0 0;
+  margin: 20px 0 10px;
   text-align: center;
 }
 
@@ -66,18 +65,16 @@ header img {
   color: #6b7280;
 }
 
-/* GRID FIXED */
+/* GRID — FIXED ALIGNMENT */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 🔥 forces alignment */
   gap: 25px;
-  margin-top: 20px;
-  justify-items: center;
+  margin-top: 0; /* 🔥 removes space under stats */
 }
 
 .card {
   width: 100%;
-  max-width: 500px;
   background: #ffffff;
   border-radius: 14px;
   overflow: hidden;
@@ -166,6 +163,13 @@ footer {
   padding: 20px;
   color: #9ca3af;
   font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
