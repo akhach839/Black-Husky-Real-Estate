@@ -81,18 +81,19 @@ header img {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* IMAGE DEFAULT (DESKTOP) */
+/* DESKTOP IMAGES */
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-/* MOBILE IMAGE FIX */
+/* MOBILE IMAGE FIX - SQUARE + NO ZOOM */
 @media (max-width: 768px) {
   .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
     height: auto;
-    max-height: 250px;
     object-fit: contain;
     background: #f3f4f6;
   }
@@ -224,7 +225,7 @@ header img {
 
     <!-- Aurora House -->
     <div class="card">
-      <img src="./aurora-house.png">
+      <img src="./aurorahouse.png">
       <div class="content">
         <h3>Aurora House</h3>
         <div class="location">Aurora, CO</div>
