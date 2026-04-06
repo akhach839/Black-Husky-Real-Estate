@@ -25,7 +25,7 @@ header {
 }
 
 header img {
-  width: 800px; /* 🔥 ACTUALLY BIG NOW */
+  width: 800px;
   max-width: 98%;
   display: block;
   margin: 0 auto;
@@ -42,7 +42,7 @@ header img {
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 10px 20px 40px; /* 🔥 reduced top padding */
+  padding: 10px 20px 40px;
 }
 
 /* STATS */
@@ -50,7 +50,7 @@ header img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 20px 0 10px; /* 🔥 tighter */
+  margin: 20px 0 0;
   text-align: center;
 }
 
@@ -66,15 +66,18 @@ header img {
   color: #6b7280;
 }
 
-/* GRID */
+/* GRID FIXED */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 25px;
-  margin-top: 10px; /* 🔥 eliminates gap */
+  margin-top: 20px;
+  justify-items: center;
 }
 
 .card {
+  width: 100%;
+  max-width: 500px;
   background: #ffffff;
   border-radius: 14px;
   overflow: hidden;
@@ -121,13 +124,6 @@ header img {
 
 .value {
   font-weight: 600;
-}
-
-/* CENTER LAST PROPERTY */
-.center-card {
-  grid-column: span 2;
-  max-width: 520px;
-  margin: 0 auto;
 }
 
 /* CTA */
@@ -224,7 +220,7 @@ footer {
   </div>
 </div>
 
-<div class="card center-card">
+<div class="card">
   <img src="denver condo.jpg">
   <div class="content">
     <h2>Denver Condo</h2>
