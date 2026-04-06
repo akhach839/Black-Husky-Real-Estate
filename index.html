@@ -24,7 +24,7 @@ header {
 }
 
 header img {
-  width: 450px; /* slightly reduced */
+  width: 420px;
   max-width: 100%;
 }
 
@@ -52,7 +52,6 @@ header img {
   margin: 0;
   color: #16a34a;
   font-size: 32px;
-  line-height: 1.1;
 }
 
 .stat p {
@@ -65,15 +64,22 @@ header img {
 .grid {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
 }
 
 /* CARDS */
 .card {
-  flex: 1;
+  flex: 1 1 calc(25% - 25px);
   background: white;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .card img {
@@ -132,8 +138,9 @@ header img {
   .container {
     width: 95%;
   }
-  .grid {
-    flex-direction: column;
+
+  .card {
+    flex: 1 1 100%;
   }
 }
 </style>
@@ -143,7 +150,7 @@ header img {
 <body>
 
 <header>
-  <img src="husky.png">
+  <img src="./husky.png">
 </header>
 
 <div class="container">
@@ -151,12 +158,12 @@ header img {
   <!-- STATS -->
   <div class="stats">
     <div class="stat">
-      <h3>$2,570+</h3>
+      <h3>$4,870+</h3>
       <p>Monthly Cash Flow</p>
     </div>
 
     <div class="stat">
-      <h3>$30K+</h3>
+      <h3>$58K+</h3>
       <p>Annual Income</p>
     </div>
 
@@ -171,7 +178,7 @@ header img {
 
     <!-- Aurora Condo -->
     <div class="card">
-      <img src="auroracondo.jpg">
+      <img src="./auroracondo.jpg">
       <div class="content">
         <h3>Aurora Condo</h3>
         <div class="location">Aurora, CO</div>
@@ -184,7 +191,7 @@ header img {
 
     <!-- Denton House -->
     <div class="card">
-      <img src="denton house.webp">
+      <img src="./denton-house.webp">
       <div class="content">
         <h3>Denton House</h3>
         <div class="location">Denton, TX</div>
@@ -197,7 +204,7 @@ header img {
 
     <!-- Denver Condo -->
     <div class="card">
-      <img src="denver condo.jpg">
+      <img src="./denver-condo.jpg">
       <div class="content">
         <h3>Denver Condo</h3>
         <div class="location">Denver, CO</div>
@@ -208,14 +215,9 @@ header img {
       </div>
     </div>
 
-  </div>
-
-  <!-- SECOND ROW -->
-  <div class="grid" style="margin-top:25px;">
-
     <!-- Aurora House -->
     <div class="card">
-      <img src="aurora-house.png">
+      <img src="./aurora-house.png">
       <div class="content">
         <h3>Aurora House</h3>
         <div class="location">Aurora, CO</div>
