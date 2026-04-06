@@ -15,7 +15,6 @@ body {
   color: #111827;
 }
 
-/* HEADER */
 header {
   text-align: center;
   padding: 20px 20px 0;
@@ -28,18 +27,15 @@ header img {
   max-width: 100%;
 }
 
-/* CONTAINER */
 .container {
   width: 1200px;
   margin: auto;
   padding: 30px 0;
 }
 
-/* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 40px;
   text-align: center;
 }
@@ -60,14 +56,12 @@ header img {
   font-size: 14px;
 }
 
-/* GRID */
 .grid {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
 }
 
-/* CARDS */
 .card {
   flex: 1 1 calc(25% - 25px);
   background: white;
@@ -114,7 +108,11 @@ header img {
   font-weight: 600;
 }
 
-/* CONTACT */
+.rate {
+  color: #2563eb;
+  font-weight: 600;
+}
+
 .contact {
   margin-top: 50px;
   padding: 30px;
@@ -124,27 +122,15 @@ header img {
   text-align: center;
 }
 
-.contact h2 {
-  margin-bottom: 10px;
-}
-
-.contact p {
-  margin: 5px 0;
-  color: #374151;
-}
-
-/* MOBILE */
 @media (max-width: 1250px) {
   .container {
     width: 95%;
   }
-
   .card {
     flex: 1 1 100%;
   }
 }
 </style>
-
 </head>
 
 <body>
@@ -186,6 +172,7 @@ header img {
         <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
         <div class="row"><span>Value</span><span>$330,000</span></div>
         <div class="row"><span>Debt</span><span>$170,000</span></div>
+        <div class="row"><span>Rate</span><span class="rate">2.5%</span></div>
       </div>
     </div>
 
@@ -199,6 +186,7 @@ header img {
         <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
         <div class="row"><span>Value</span><span>$310,000</span></div>
         <div class="row"><span>Debt</span><span>$200,000</span></div>
+        <div class="row"><span>Rate</span><span class="rate">2.8%</span></div>
       </div>
     </div>
 
@@ -217,7 +205,7 @@ header img {
 
     <!-- Aurora House -->
     <div class="card">
-      <img src="./aurorahouse.png">
+      <img src="./aurora-house.png">
       <div class="content">
         <h3>Aurora House</h3>
         <div class="location">Aurora, CO</div>
