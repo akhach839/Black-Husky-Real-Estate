@@ -25,7 +25,7 @@ header {
 }
 
 header img {
-  width: 600px; /* 🔥 25% smaller */
+  width: 600px;
   max-width: 95%;
   display: block;
   margin: 0 auto;
@@ -40,7 +40,7 @@ header img {
 
 /* CONTAINER */
 .container {
-  max-width: 1100px;
+  max-width: 1200px; /* 🔥 slightly wider for perfect spacing */
   margin: auto;
   padding: 10px 20px 40px;
 }
@@ -65,14 +65,15 @@ header img {
   color: #6b7280;
 }
 
-/* GRID — FIXED ALIGNMENT */
+/* GRID — TRUE 3 COLUMN FIX */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 🔥 forces alignment */
+  grid-template-columns: repeat(3, 1fr); /* 🔥 equal columns */
   gap: 25px;
-  margin-top: 0; /* 🔥 removes space under stats */
+  margin-top: 0;
 }
 
+/* REMOVE WIDTH CONSTRAINTS */
 .card {
   width: 100%;
   background: #ffffff;
@@ -90,6 +91,7 @@ header img {
   width: 100%;
   height: 210px;
   object-fit: cover;
+  display: block;
 }
 
 .content {
