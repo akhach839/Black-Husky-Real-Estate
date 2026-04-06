@@ -19,28 +19,35 @@ body {
 /* HEADER */
 header {
   text-align: center;
-  padding: 20px 20px 0;
+  padding: 20px 20px 10px;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
 
 header img {
   width: 600px;
-  max-width: 100%;
+  max-width: 95%;
+}
+
+.subheadline {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-top: 6px;
 }
 
 /* CONTAINER */
 .container {
-  width: 1200px; /* 🔥 FIX: fixed width ensures 3 fit */
+  max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 /* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 30px 0;
   text-align: center;
 }
 
@@ -50,21 +57,27 @@ header img {
 
 .stat h3 {
   margin: 0;
+  font-size: 30px;
   color: #16a34a;
-  font-size: 28px;
 }
 
-/* GRID — FORCE 3 */
+.stat p {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* GRID — TRUE 3 COLUMN */
 .grid {
-  display: flex; /* 🔥 no wrapping grid issues */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 FIXED */
   gap: 25px;
 }
 
 /* CARDS */
 .card {
-  flex: 1; /* 🔥 equal width */
-  background: white;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 14px;
   overflow: hidden;
   border: 1px solid #e5e7eb;
 }
@@ -76,14 +89,25 @@ header img {
 }
 
 .content {
-  padding: 15px;
+  padding: 18px;
+}
+
+.content h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.content p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #6b7280;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .green {
@@ -91,13 +115,54 @@ header img {
   font-weight: 600;
 }
 
-/* MOBILE FALLBACK */
-@media (max-width: 1250px) {
-  .container {
-    width: 95%;
-  }
+.value {
+  font-weight: 600;
+}
+
+/* CTA */
+.cta {
+  margin-top: 50px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.form {
+  max-width: 450px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.form button {
+  background: #111827;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
     flex-direction: column;
+    gap: 15px;
   }
 }
 </style>
@@ -108,6 +173,7 @@ header img {
 
 <header>
   <img src="husky.png">
+  <div class="subheadline">PRIVATE OFFERING · CONFIDENTIAL</div>
 </header>
 
 <div class="container">
@@ -133,34 +199,59 @@ header img {
 <div class="card">
   <img src="auroracondo.jpg">
   <div class="content">
-    <h3>Aurora Condo</h3>
+    <h2>Aurora Condo</h2>
+    <p>14313 E 1st Dr Unit 205</p>
     <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
+    <div class="row"><span>Financing</span><span class="value">2.8% Assumable</span></div>
   </div>
 </div>
 
 <div class="card">
   <img src="denton house.webp">
   <div class="content">
-    <h3>Denton House</h3>
+    <h2>Denton House</h2>
+    <p>1109 Bayfield Dr</p>
     <div class="row"><span>Rent</span><span class="green">$2,000</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
+    <div class="row"><span>Financing</span><span class="value">2.5% Assumable</span></div>
   </div>
 </div>
 
 <div class="card">
   <img src="denver condo.jpg">
   <div class="content">
-    <h3>Denver Condo</h3>
+    <h2>Denver Condo</h2>
+    <p>9725 E Harvard Ave Unit 451</p>
     <div class="row"><span>Rent</span><span class="green">$1,300</span></div>
     <div class="row"><span>Cash Flow</span><span class="green">$870/mo</span></div>
+    <div class="row"><span>Financing</span><span class="value">None (Free & Clear)</span></div>
   </div>
 </div>
 ```
 
   </div>
 
+  <div class="cta">
+    <h2>Request Offering Details</h2>
+
+```
+<form action="mailto:akhach839@gmail.com" method="POST" enctype="text/plain" class="form">
+  <input type="text" name="Name" placeholder="Full Name" required>
+  <input type="email" name="Email" placeholder="Email Address" required>
+  <input type="tel" name="Phone" placeholder="Phone Number">
+  <textarea name="Message" rows="4" placeholder="I'm interested in reviewing the investment details..."></textarea>
+  <button type="submit">Submit Inquiry</button>
+</form>
+```
+
+  </div>
+
 </div>
+
+<footer>
+  © 2026 Black Husky Real Estate
+</footer>
 
 </body>
 </html>
