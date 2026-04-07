@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -16,6 +15,7 @@ body {
   color: #111827;
 }
 
+/* HEADER */
 header {
   text-align: center;
   padding: 20px;
@@ -25,43 +25,43 @@ header {
 
 header img {
   width: 450px;
+  max-width: 100%;
 }
 
+/* CONTAINER */
 .container {
-  width: 1200px;
+  width: 1300px;
   margin: auto;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 /* STATS */
 .stats {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.stat { flex: 1; }
+.stat {
+  flex: 1;
+}
 
 .stat h3 {
   margin: 0;
   color: #16a34a;
-  font-size: 32px;
+  font-size: 28px;
 }
 
-.stat p {
-  margin: 5px 0 0;
-  color: #6b7280;
-}
-
-/* GRID — 4 CARDS */
+/* GRID */
 .grid {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
+/* CARD */
 .card {
-  width: 25%;
+  flex: 1;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -70,7 +70,7 @@ header img {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -78,9 +78,13 @@ header img {
   padding: 15px;
 }
 
+.content h3 {
+  margin: 0 0 5px;
+}
+
 .location {
-  font-size: 13px;
   color: #6b7280;
+  font-size: 13px;
   margin-bottom: 10px;
 }
 
@@ -88,7 +92,7 @@ header img {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .green {
@@ -96,36 +100,15 @@ header img {
   font-weight: 600;
 }
 
-/* SERVICES */
-.services {
-  margin-top: 50px;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-  line-height: 1.7;
-}
-
-/* CONTACT */
-.contact {
-  margin-top: 40px;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  text-align: center;
+.blue {
+  color: #2563eb;
+  font-weight: 600;
 }
 
 /* MOBILE */
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .container { width: 95%; }
-  .grid { flex-direction: column; }
-  .card { width: 100%; }
+  .grid { flex-wrap: wrap; }
 }
 </style>
 
@@ -139,105 +122,77 @@ header img {
 
 <div class="container">
 
-  <!-- STATS -->
-
   <div class="stats">
     <div class="stat">
       <h3>$4,870+</h3>
       <p>Monthly Cash Flow</p>
     </div>
-
-```
-<div class="stat">
-  <h3>$30K+</h3>
-  <p>Annual Income</p>
-</div>
-
-<div class="stat">
-  <h3>6%+</h3>
-  <p>Cash Yield</p>
-</div>
-```
-
+    <div class="stat">
+      <h3>$58K+</h3>
+      <p>Annual Income</p>
+    </div>
+    <div class="stat">
+      <h3>6%+</h3>
+      <p>Cash Yield</p>
+    </div>
   </div>
-
-  <!-- 4 PROPERTIES IN ONE ROW -->
 
   <div class="grid">
 
-```
-<div class="card">
-  <img src="auroracondo.jpg">
-  <div class="content">
-    <h3>Aurora Condo</h3>
-    <div class="location">Aurora, CO</div>
-    <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
-    <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
-    <div class="row"><span>Value</span><span>$330,000</span></div>
-    <div class="row"><span>Debt</span><span>$170,000</span></div>
-  </div>
-</div>
+    <!-- Aurora Condo -->
+    <div class="card">
+      <img src="auroracondo.jpg">
+      <div class="content">
+        <h3>Aurora Condo</h3>
+        <div class="location">Aurora, CO</div>
+        <div class="row"><span>Rent</span><span class="green">$2,100</span></div>
+        <div class="row"><span>Cash Flow</span><span class="green">$900/mo</span></div>
+        <div class="row"><span>APR</span><span class="blue">2.8% Assumable</span></div>
+        <div class="row"><span>Value</span><span>$330,000</span></div>
+        <div class="row"><span>Debt</span><span>$170,000</span></div>
+      </div>
+    </div>
 
-<div class="card">
-  <img src="dentonhouse.webp">
-  <div class="content">
-    <h3>Denton House</h3>
-    <div class="location">Denton, TX</div>
-    <div class="row"><span>Rent</span><span class="green">$2,000</span></div>
-    <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
-    <div class="row"><span>Value</span><span>$310,000</span></div>
-    <div class="row"><span>Debt</span><span>$200,000</span></div>
-  </div>
-</div>
+    <!-- Denton House -->
+    <div class="card">
+      <img src="denton house.webp">
+      <div class="content">
+        <h3>Denton House</h3>
+        <div class="location">Denton, TX</div>
+        <div class="row"><span>Rent</span><span class="green">$2,000</span></div>
+        <div class="row"><span>Cash Flow</span><span class="green">$800/mo</span></div>
+        <div class="row"><span>APR</span><span class="blue">2.5% Assumable</span></div>
+        <div class="row"><span>Value</span><span>$310,000</span></div>
+        <div class="row"><span>Debt</span><span>$200,000</span></div>
+      </div>
+    </div>
 
-<div class="card">
-  <img src="denvercondo.jpg">
-  <div class="content">
-    <h3>Denver Condo</h3>
-    <div class="location">Denver, CO</div>
-    <div class="row"><span>Rent</span><span class="green">$1,300</span></div>
-    <div class="row"><span>Cash Flow</span><span class="green">$870/mo</span></div>
-    <div class="row"><span>Value</span><span>$150,000</span></div>
-    <div class="row"><span>Debt</span><span>$0</span></div>
-  </div>
-</div>
+    <!-- Denver Condo -->
+    <div class="card">
+      <img src="denver condo.jpg">
+      <div class="content">
+        <h3>Denver Condo</h3>
+        <div class="location">Denver, CO</div>
+        <div class="row"><span>Rent</span><span class="green">$1,300</span></div>
+        <div class="row"><span>Cash Flow</span><span class="green">$870/mo</span></div>
+        <div class="row"><span>Value</span><span>$150,000</span></div>
+        <div class="row"><span>Debt</span><span>$0</span></div>
+      </div>
+    </div>
 
-<div class="card">
-  <img src="aurorahouse.png">
-  <div class="content">
-    <h3>Aurora House</h3>
-    <div class="location">Aurora, CO</div>
-    <div class="row"><span>Rent</span><span class="green">$2,600</span></div>
-    <div class="row"><span>Cash Flow</span><span class="green">$2,300/mo</span></div>
-    <div class="row"><span>Value</span><span>$450,000+</span></div>
-    <div class="row"><span>Debt</span><span>$0</span></div>
-  </div>
-</div>
-```
+    <!-- Aurora House -->
+    <div class="card">
+      <img src="aurora-house.png">
+      <div class="content">
+        <h3>Aurora House</h3>
+        <div class="location">Aurora, CO</div>
+        <div class="row"><span>Rent</span><span class="green">$2,600</span></div>
+        <div class="row"><span>Cash Flow</span><span class="green">$2,300/mo</span></div>
+        <div class="row"><span>Value</span><span>$450,000+</span></div>
+        <div class="row"><span>Debt</span><span>$0</span></div>
+      </div>
+    </div>
 
-  </div>
-
-  <!-- SERVICES -->
-
-  <div class="services">
-    <h2>Investment & Operating Capabilities</h2>
-    <ul>
-      <li><strong>Real Estate Consulting</strong> — Deal evaluation and portfolio strategy</li>
-      <li><strong>Property Management</strong> — Tenant placement, rent collection, maintenance</li>
-      <li><strong>Investment Strategy</strong> — Market selection and scaling rental portfolios</li>
-      <li><strong>Acquisitions & Sales</strong> — Sourcing, underwriting, negotiation</li>
-      <li><strong>Renovation Execution</strong> — Value-add improvements and rent optimization</li>
-      <li><strong>Financing Strategy</strong> — Loan structuring and capital planning</li>
-      <li><strong>Financial Analysis</strong> — Cash flow modeling and deal structuring</li>
-    </ul>
-  </div>
-
-  <!-- CONTACT -->
-
-  <div class="contact">
-    <h2>Contact</h2>
-    <p>Email: blackhuskyre@gmail.com</p>
-    <p>Phone: 720-238-9330</p>
   </div>
 
 </div>
