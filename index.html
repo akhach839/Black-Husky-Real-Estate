@@ -26,7 +26,6 @@ header {
 
 header img {
   width: 450px;
-  max-width: 100%;
 }
 
 /* CONTAINER */
@@ -45,15 +44,12 @@ header img {
   text-align: center;
 }
 
-.stat {
-  flex: 1;
-}
+.stat { flex: 1; }
 
 .stat h3 {
   margin: 0;
   color: #16a34a;
   font-size: 32px;
-  line-height: 1.1;
 }
 
 .stat p {
@@ -68,9 +64,20 @@ header img {
   gap: 25px;
 }
 
+/* FORCE 3 EQUAL CARDS */
+.grid-3 .card {
+  width: calc(33.333% - 17px);
+}
+
+/* CENTER SINGLE CARD */
+.center-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
 /* CARDS */
 .card {
-  flex: 1;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -85,10 +92,6 @@ header img {
 
 .content {
   padding: 15px;
-}
-
-.content h3 {
-  margin: 0 0 5px;
 }
 
 .location {
@@ -109,10 +112,6 @@ header img {
   font-weight: 600;
 }
 
-.bold {
-  font-weight: 600;
-}
-
 /* SERVICES */
 .services {
   margin-top: 50px;
@@ -120,10 +119,6 @@ header img {
   background: white;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
-}
-
-.services h2 {
-  margin-bottom: 20px;
 }
 
 /* CONTACT */
@@ -136,23 +131,11 @@ header img {
   text-align: center;
 }
 
-.contact h2 {
-  margin-bottom: 10px;
-}
-
-.contact p {
-  margin: 5px 0;
-  color: #374151;
-}
-
 /* MOBILE */
 @media (max-width: 1250px) {
-  .container {
-    width: 95%;
-  }
-  .grid {
-    flex-direction: column;
-  }
+  .container { width: 95%; }
+  .grid { flex-direction: column; }
+  .grid-3 .card { width: 100%; }
 }
 </style>
 
@@ -173,24 +156,19 @@ header img {
       <h3>$2,570+</h3>
       <p>Monthly Cash Flow</p>
     </div>
-
-```
-<div class="stat">
-  <h3>$30K+</h3>
-  <p>Annual Income</p>
-</div>
-
-<div class="stat">
-  <h3>6%+</h3>
-  <p>Cash Yield</p>
-</div>
-```
-
+    <div class="stat">
+      <h3>$30K+</h3>
+      <p>Annual Income</p>
+    </div>
+    <div class="stat">
+      <h3>6%+</h3>
+      <p>Cash Yield</p>
+    </div>
   </div>
 
-  <!-- PROPERTIES -->
+  <!-- 3 PROPERTIES -->
 
-  <div class="grid">
+  <div class="grid grid-3">
 
 ```
 <div class="card">
@@ -232,10 +210,10 @@ header img {
 
   </div>
 
-  <!-- SECOND ROW -->
+  <!-- CENTERED HOUSE (FIXED SIZE) -->
 
-  <div class="grid" style="margin-top:25px;">
-    <div class="card">
+  <div class="center-row">
+    <div class="card" style="width: 400px;">
       <img src="aurorahouse.png">
       <div class="content">
         <h3>Aurora House</h3>
@@ -254,24 +232,14 @@ header img {
     <h2>Investment & Operating Capabilities</h2>
 
 ```
-<ul style="list-style: none; padding: 0; margin: 0; color: #374151; font-size: 14px; line-height: 1.7;">
-
-  <li><strong>Real Estate Consulting</strong> — Deal evaluation, portfolio strategy, and acquisition guidance</li>
-
-  <li><strong>Property Management</strong> — Tenant placement, rent collection, maintenance coordination, and oversight</li>
-
-  <li><strong>Investment Strategy</strong> — Market selection, cash-flow optimization, and long-term portfolio growth</li>
-
-  <li><strong>Acquisitions & Dispositions</strong> — Sourcing opportunities, underwriting, negotiation, and execution</li>
-
-  <li><strong>Renovation & Value-Add Execution</strong> — Light rehab, repositioning, and rent optimization strategies</li>
-
-  <li><strong>Financing & Lending Strategy</strong> — Loan structuring, rate optimization, and capital planning</li>
-
-  <li><strong>Portfolio Scaling</strong> — Systems, processes, and structure for growing multi-property portfolios</li>
-
-  <li><strong>Financial Analysis</strong> — Cash flow modeling, return analysis, and deal structuring</li>
-
+<ul style="list-style:none;padding:0;margin:0;line-height:1.7;">
+  <li><strong>Real Estate Consulting</strong> — Deal evaluation and portfolio strategy</li>
+  <li><strong>Property Management</strong> — Tenant placement, rent collection, maintenance</li>
+  <li><strong>Investment Strategy</strong> — Market selection and scaling rental portfolios</li>
+  <li><strong>Acquisitions & Sales</strong> — Sourcing, underwriting, negotiation</li>
+  <li><strong>Renovation Execution</strong> — Value-add improvements and rent optimization</li>
+  <li><strong>Financing Strategy</strong> — Loan structuring and capital planning</li>
+  <li><strong>Financial Analysis</strong> — Cash flow modeling and deal structuring</li>
 </ul>
 ```
 
