@@ -68,20 +68,14 @@ header img {
   border: 1px solid #e5e7eb;
 }
 
-/* IMAGE FIX */
 .card img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* 🔥 perfect square */
-  object-fit: cover;     /* still clean but less awkward */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-/* CONTENT */
 .content {
   padding: 15px;
-}
-
-.content h3 {
-  margin: 0 0 5px;
 }
 
 .location {
@@ -107,11 +101,46 @@ header img {
   font-weight: 600;
 }
 
+/* SERVICES */
+.services {
+  margin-top: 60px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 40px;
+  font-size: 14px;
+}
+
+.services-grid div {
+  color: #374151;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 40px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
 /* MOBILE */
 @media (max-width: 1300px) {
   .container { width: 95%; }
   .grid { flex-wrap: wrap; }
   .card { flex: 1 1 100%; }
+  .services-grid { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -125,6 +154,7 @@ header img {
 
 <div class="container">
 
+  <!-- STATS -->
   <div class="stats">
     <div class="stat">
       <h3>$4,870+</h3>
@@ -140,9 +170,9 @@ header img {
     </div>
   </div>
 
+  <!-- PROPERTIES -->
   <div class="grid">
 
-    <!-- Aurora Condo -->
     <div class="card">
       <img src="auroracondo.jpg">
       <div class="content">
@@ -156,7 +186,6 @@ header img {
       </div>
     </div>
 
-    <!-- Denton House -->
     <div class="card">
       <img src="dentonhouse.webp">
       <div class="content">
@@ -170,7 +199,6 @@ header img {
       </div>
     </div>
 
-    <!-- Denver Condo -->
     <div class="card">
       <img src="denvercondo.jpg">
       <div class="content">
@@ -183,7 +211,6 @@ header img {
       </div>
     </div>
 
-    <!-- Aurora House -->
     <div class="card">
       <img src="aurorahouse.png">
       <div class="content">
@@ -196,6 +223,29 @@ header img {
       </div>
     </div>
 
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <h2>Investment & Operating Capabilities</h2>
+
+    <div class="services-grid">
+      <div><strong>Real Estate Consulting</strong> — Deal analysis, portfolio strategy</div>
+      <div><strong>Property Management</strong> — Leasing, tenant management, maintenance</div>
+      <div><strong>Investment Strategy</strong> — Market selection & scaling rental portfolios</div>
+      <div><strong>Acquisitions & Sales</strong> — Sourcing, underwriting, negotiation</div>
+      <div><strong>Renovation & Value-Add</strong> — Rehab, rent optimization</div>
+      <div><strong>Financing Strategy</strong> — Loan structuring, leverage optimization</div>
+      <div><strong>Financial Analysis</strong> — Cash flow modeling & deal structuring</div>
+      <div><strong>Banking Expertise</strong> — Lending insight from industry experience</div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact">
+    <h3>Contact</h3>
+    <p>Email: blackhuskyre@gmail.com</p>
+    <p>Phone: 720-238-9330</p>
   </div>
 
 </div>
